@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: white;
+    background-color: #613583;
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+p {
+    color: white;
+    background-color: #241F31;
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+p a {
+    color: #62A0EA;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 0.25em;
+}
+
+form input, form textarea {
+    font-size: 1.2em;
+    border-radius: 1em;
+    padding: 0.5em;
+}
