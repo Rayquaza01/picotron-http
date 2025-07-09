@@ -34,7 +34,7 @@ Defines a callback for a specific path. The callback takes the arguments `client
 
 `headers` includes `method`, `path`, and `queryString` along with whatever headers were included in the request.
 
-### `HTTPSocket`
+## `HTTPSocket`
 
 A wrapper around a socket.
 
