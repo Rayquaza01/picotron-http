@@ -20,7 +20,7 @@ Sets a static path to serve from (default `.`)
 
 ### `HTTPServer:serveStaticPage(method, path, client)`
 
-Serves a static page. `method` should be `HEAD` or `GET`. Path is the path of the file to serve. Client is an `HTTPSocket`
+Serves a static page. `method` should be `HEAD` or `GET`. `path` is the path of the file to serve. `client` is an `HTTPSocket`
 
 ### `HTTPServer:GET(path, cb)`
 
