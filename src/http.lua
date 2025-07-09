@@ -175,6 +175,10 @@ function HTTPServer:Update()
                 end
 			end
 		end
+
+        while #self.log > 25 do
+            deli(self.log, 1)
+        end
     end
 end
 
