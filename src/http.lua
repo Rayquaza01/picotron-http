@@ -146,6 +146,20 @@ end
 
 function HTTPServer:Update()
 	if self.listener then
+		--[[
+
+		listener:accept() on windows "always" returns truthy
+		so self.clients builds up to ~510 sockets then stops accepting
+		new connections. Even Zep's example in the manual does not work
+		on windows
+
+		calling sock:close() does free up those socket connections
+		but I'm not entirely sure how that would best fit with the below
+		Windows (Unless Zep considers this a bug) needs to operate in a 
+		KeepAlive=false manner where the socket is immediately closed
+		after being read
+
+		]]--
 		local new_client = self.listener:accept()
 		if new_client then
 			add(self.clients, HTTPSocket:New(new_client))
